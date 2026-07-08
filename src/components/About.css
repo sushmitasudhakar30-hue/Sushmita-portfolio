@@ -1,0 +1,202 @@
+.about {
+  position: relative;
+  background: var(--bg-primary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.about-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 32px;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-card);
+}
+
+.about-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.card-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-light);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--accent-primary);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.status-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.status-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+}
+
+.status-value {
+  font-size: 0.98rem;
+  color: var(--text-primary);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--accent-primary);
+  color: #ffffff;
+  padding: 7px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+/* Shared edit controls (used in About and Hero) */
+.editable-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-primary);
+  border-radius: 10px;
+  resize: vertical;
+  font-family: var(--font-main);
+}
+
+.edit-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.edit-save-btn,
+.edit-cancel-btn,
+.edit-reset-btn {
+  padding: 7px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-mono);
+  border: none;
+}
+
+.edit-save-btn {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
+
+.edit-save-btn:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-1px);
+}
+
+.edit-cancel-btn {
+  background: var(--accent-light);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.edit-cancel-btn:hover {
+  color: var(--text-primary);
+}
+
+.edit-reset-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  font-size: 0.76rem;
+}
+
+.edit-reset-btn:hover {
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+.edit-inline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 5px 12px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: var(--accent-light);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--accent-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-mono);
+}
+
+.edit-inline-btn:hover {
+  background: var(--accent-primary);
+  color: #ffffff;
+  border-color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-card { padding: 24px; }
+}
